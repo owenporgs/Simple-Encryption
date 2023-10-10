@@ -1,19 +1,13 @@
-
-const encrypt = () => {
-    //////////////////////////////
-    // Get inputs
-    let input = document.getElementById('message').value;
-    let inputKey = document.getElementById('encrypt-key').value;
-
-    ////////////////////////////
-    // Empty Arrays
+function cat() {
+    var q = encrypt("cat", "password");
+    alert(q);
+    alert(decrypt(q, "password");
+}
+function encrypt(input, inputKey) {
     let arrKey = [];
     let arr = [];
     let arrEncript = [];
     let key = 0;
-
-    /////////////////// KEY
-    // From key input to array
     for (let i = 0; i < inputKey.length; i++) {
         arrKey[i] = inputKey[i];
     }
@@ -38,22 +32,11 @@ const encrypt = () => {
     }
 
     ///////////// Display
-    document.getElementById('encrypted-message').innerHTML = arrEncript.join("");
-    document.getElementById('encrypted-message').style.padding = '1rem';
-    document.getElementById('encrypted-message').style.border = '1px solid red'; 
-
-
+   return arrEncript.join("");
 }
 
 
-const decrypt = () => {
-    //////////////////////////////
-    // Get inputs
-    let input = document.getElementById('decrypt-message').value;
-    let inputKey = document.getElementById('decrypt-key').value;
-
-    ////////////////////////////
-    // Empty Arrays
+function decrypt(input, inputKey){
     let arrKey = [];
     let arr = [];
     let arrDecrypt = [];
@@ -85,9 +68,5 @@ const decrypt = () => {
     }
 
     ///////////// Display
-    document.getElementById('decrypted-message').innerHTML = arrDecrypt.join("");
-    document.getElementById('decrypted-message').style.padding = '1rem';
-    document.getElementById('decrypted-message').style.border = '1px solid red'; 
-
-
+    return arrDecrypt.join("");
 }
